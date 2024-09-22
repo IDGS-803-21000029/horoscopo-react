@@ -1,0 +1,136 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Estilo general del contenedor */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem; /* Espacio entre las cards */
+}
+
+/* Estilo de la card (se usa tanto para el calendario como para el horóscopo) */
+.card {
+  flex: 1;
+  background-color: #ffffff; /* Fondo blanco para las cards */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto hover: la card "sube" y la sombra se hace más visible */
+.card:hover {
+  transform: translateY(-10px); /* La card se eleva al pasar el mouse */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+/* Títulos dentro de las cards (puedes usar esto para el signo zodiacal) */
+.card h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para el input de fecha */
+input[type="date"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Bordes más redondeados */
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem; /* Espacio debajo del input */
+  transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus {
+  border-color: #007bff; /* Color de borde azul al hacer foco */
+  outline: none;
+}
+
+/* Botón de enviar */
+button {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+/* Imagen del signo zodiacal */
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Asegura que la imagen se adapte al contenedor */
+}
+
+/* Texto adicional (descripción del signo) */
+p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Estilo de la fecha de inicio y fin */
+.date-range {
+  font-size: 1rem;
+  color: #999;
+  margin-top: 1rem;
+}
+
